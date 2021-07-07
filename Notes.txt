@@ -1,0 +1,42 @@
+RFID Solution
+
+where it will be installed ? to which object ?
+is it once to read or bulk to read ?
+
+
+UHF ( Ultra High Frequency ) = Range up to 12m
+
+1-Active RFID (More expensive but longer range) (required internal battery)
+	- Transponders (Only wake up when they receive radio signal)
+2-Passive RFID (Less Expensive and shorter range)
+	- Salik is Passive tag powered by the transceiver in the toll gate without internal battery
+	https://www.alibaba.com/product-detail/860-960MHz-ISO18000-6C-EPC-G2_60578000355.html?spm=a2700.galleryofferlist.normal_offer.d_title.7b26ba28clcjFX
+
+Passive solution is better 
+
+- RFID as read-only with generated serial number to be a master key in database to store data.
+- RFID Field programmable tags to be written one time only. ( Preffered to be a hashed sha-256 encrypted value stored in database as master key )
+
+Reader Type:
+- Active Reader Passive Tag (ARPT): Active Reader to transmits interrogator signals and receive authentication from Passive Tag.
+https://www.alibaba.com/product-detail/860-960mhz-Reader-860-960mhz-Long_1600176228219.html?spm=a2700.galleryofferlist.topad_classic.d_title.2571400bLvj5tH
+https://www.alibaba.com/product-detail/Reader-860-960mhz-15m-Long-Distance_62554922958.html?spm=a2700.galleryofferlist.normal_offer.d_title.2571400bLvj5tH&s=p
+https://www.alibaba.com/product-detail/UHF-860-960Mhz-long-range-integrated_62014090523.html?spm=a2700.galleryofferlist.normal_offer.d_title.2571400bLvj5tH
+
+-
+
+Demo Requirements:
+
+- Database Type & Sample table
+- 
+
+
+
+
+----------
+
+work flow
+
+RFID Reader will get RFID Tag serial by scanning
+reader will send the serial through attached device to the (API with get request)
+API will reply with required data from database to render it to the user (Web or mobile application)
