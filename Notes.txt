@@ -40,3 +40,9 @@ work flow
 RFID Reader will get RFID Tag serial by scanning
 reader will send the serial through attached device to the (API with get request)
 API will reply with required data from database to render it to the user (Web or mobile application)
+
+
+what if ?
+
+RFID serial == License ID ( So no change in the current DB & we can use the current view license API)
+
