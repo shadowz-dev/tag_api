@@ -75,9 +75,15 @@ def home():
 #def all():
 #    return jsonify(data)
 class licenses_handler(Resource):
-    def get(self, license, Id):
-        return data[license[Id]]
-api.add_resource(licenses_handler, "/<string:license>/<int:Id>")
+    def get(self, Id):
+        return "License No: " + str(data['Licenses'][Id]['Serial'])  + " " + \
+               "English Company Name: " + data["Licenses"][Id]["TradeNameEN"] + " " + \
+               "Arabic Company Name: " + data["Licenses"][Id]["TradeNameAR"] + " " + \
+               "Expiry Date: " + data["Licenses"][Id]["EndDate"] + " " + \
+               "Trade License Download Link : " + data["Licenses"][Id]["DownloadLicenseLink"] 
+        
+api.add_resource(licenses_handler, "/<int:Id>")
+
 
 if __name__ == '__main__':
     app.run(debug=True)

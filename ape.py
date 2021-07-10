@@ -24,8 +24,8 @@ header = {
 }
 
 payload = {
-    "EntityDefId"="6fc4c303-9628-4c28-971d-630547cc55c9",
-    "ConditionStr"={"ItemType":2,"IsRootGroup":True,"Queries":[{"ItemType":1,"Operator":1,"ColumnName":"Id","Value1":"f8607f13-a94a-4572-b330-7c06b441701a","Value2":""}]}
+    {"EntityDefId":"6fc4c303-9628-4c28-971d-630547cc55c9"},
+    {"ConditionStr":{"ItemType":2,"IsRootGroup":True,"Queries":[{"ItemType":1,"Operator":1,"ColumnName":"Id","Value1":"f8607f13-a94a-4572-b330-7c06b441701a","Value2":""}]}}
 }
 
 re = requests.post(API)
